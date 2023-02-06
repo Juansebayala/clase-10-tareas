@@ -1,0 +1,22 @@
+{
+  "name": "clase-10-tareas",
+  "version": "1.0.0",
+  "description": "Tarea de la clase 10 agregando bootstrap a algunas tareas anteriores",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Juansebayala/clase-10-tareas.git"
+  },
+  "author": "Juan Sebastián Ayala",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Juansebayala/clase-10-tareas/issues"
+  },
+  "homepage": "https://github.com/Juansebayala/clase-10-tareas#readme",
+  "dependencies": {
+    "bootstrap": "^5.2.3"
+  }
+}
