@@ -1,3 +1,17 @@
+h1, ul {
+	margin: 10px 0;
+}
+
+div {
+	margin: 5px 0;
+}
+
 .oculto {
     display: none;
+}
+
+#salarios-mensajes {
+	width: 400px;
+	position: relative;
+	left: 100px;
 }

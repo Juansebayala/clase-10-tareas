@@ -1,7 +1,7 @@
 const $botonCalcular = document.querySelector('#boton-calcular');
 
 $botonCalcular.onclick = function(event) {
-	const $salariosFamilia = document.querySelectorAll('div input');
+	const $salariosFamilia = document.querySelectorAll('#salarios-integrantes input');
 	const salariosFamilia = conseguirValoresSalarios($salariosFamilia);
 	const salariosFamiliaMensual = convertirSalariosAnualesAMensuales(salariosFamilia);
 	agregarMensajesSalarios(salariosFamilia, salariosFamiliaMensual);
@@ -22,17 +22,17 @@ function conseguirValoresSalarios(salarios) {
 
 function mostrarMensajesSalarios() {
 	const $salarios = document.querySelector('#salarios-mensajes');
-	$salarios.className = '';
+	$salarios.classList.remove('oculto');
 }
 
 function ocultarMensajesSalarios() {
 	const $salarios = document.querySelector('#salarios-mensajes');
-	$salarios.className = 'oculto';
+	$salarios.classList.add('oculto');
 }
 
 
 function agregarMensajesSalarios(salariosAnuales, salariosMensuales) {
-    $salarioMasAltoMensaje = document.querySelector('#salario-mas-alto');
+  $salarioMasAltoMensaje = document.querySelector('#salario-mas-alto');
 	$salarioMasBajoMensaje = document.querySelector('#salario-mas-bajo');
 	$salarioAnualPromedioMensaje = document.querySelector('#salario-anual-promedio');
 	$salarioMensualPromedioMensaje = document.querySelector('#salario-mensual-promedio');

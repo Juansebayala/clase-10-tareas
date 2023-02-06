@@ -23,9 +23,6 @@ function probarConvertirSalariosAnualesAMensuales() {
 }
 
 function probarValidarCantidadIntegrantes() {
-    console.assert(validarCantidadIntegrantes('5.') === 'Solo puedes agregar la cantidad de integrantes sin punto decimal',
-        'validarIntegrantes no valida que el usuario haya agregado un número sin punto decimal'
-        );
     console.assert(validarCantidadIntegrantes('0') === 'La cantidad de integrantes no puede ser menor a 0',
         'validarIntegrantes no valida que el usuario haya ingresado un número igual a 0'
         );
@@ -37,6 +34,9 @@ function probarValidarCantidadIntegrantes() {
         );
     console.assert(validarCantidadIntegrantes('35') === 'Solo puede haber menos de 20 integrantes',
         'validarIntegrantes no valida que el usuario haya ingresado un número mayor a 20'
+        );
+    console.assert(validarCantidadIntegrantes('5.') === 'Solo puedes agregar la cantidad de integrantes sin punto decimal',
+        'validarIntegrantes no valida que el usuario haya agregado un número sin punto decimal'
         );
     console.assert(validarCantidadIntegrantes('5') === '',
         'validarIntegrantes no valida que el usuario haya ingresado un número válido'

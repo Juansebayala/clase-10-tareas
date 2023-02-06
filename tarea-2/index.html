@@ -4,25 +4,35 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Tarea 2</title>
+	<link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-	<h1>Calculadora de salarios de tu familia</h1>
-	<form>
-		<ul id='mensajes-error'></ul>
-		<label for="integrantes-familia">Por favor, indica cuantos integrantes de tu familia trabajan:</label>
-		<input id="integrantes-familia" type="number" required>
-		<button id="agregar-integrantes">Agregar integrantes</button>
-
+	<h1 class="text-center">Calculadora de salarios de tu familia</h1>
+	<form class="container">
+		<div class="row row-cols-lg-auto align-items-center">
+			<div class="col-6">
+				<label for="integrantes-familia" class="form-label">Por favor, indica cuantos integrantes de tu familia trabajan:</label>
+			</div>
+			<div class="col-3">
+				<input id="integrantes-familia" type="number" class="form-control">
+			</div>
+			<div class="col-2">
+				<button id="agregar-integrantes" class="btn btn-primary">Agregar integrantes</button>
+			</div>
+		</div>
+		<div class="col-6">
+			<ul id='mensajes-error' class="alert alert-danger oculto text-center" role="alert"></ul>
+		</div>
 		<div id="salarios-integrantes"></div>
 
-		<button id="boton-calcular" class="oculto">Calcular</button>
+		<button id="boton-calcular" class="btn btn-primary oculto">Calcular</button>
 	</form>
-	<ul id="salarios-mensajes" class="oculto">
-		<li id="salario-mas-alto"></li>
-		<li id="salario-mas-bajo"></li>
-		<li id="salario-anual-promedio"></li>
-		<li id="salario-mensual-promedio"></li>
+	<ul id="salarios-mensajes" class="list-group text-center oculto">
+		<li id="salario-mas-alto" class="list-group-item"></li>
+		<li id="salario-mas-bajo" class="list-group-item"></li>
+		<li id="salario-anual-promedio" class="list-group-item"></li>
+		<li id="salario-mensual-promedio" class="list-group-item"></li>
 	</ul>
 	<script type="text/javascript" src="js/calculos.js"></script>
 	<script type="text/javascript" src="js/evento-calcular.js"></script>
